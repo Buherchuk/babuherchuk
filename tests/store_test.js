@@ -1,6 +1,6 @@
 let registrationUser = {
     firstName: 'Oleg',
-    lastName: 'Olegsurname',
+    lastName: '969594',
     telephone: '380998899998',
     password: 'fUxXF8vY7W3d',
 };
