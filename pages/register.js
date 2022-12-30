@@ -10,13 +10,9 @@ module.exports = {
   passwordConfirmField: { css: '#input-confirm' },
   agreeCheckbox: { xpath: '//input[@name="agree"]'},
   registerButton: { xpath: '//*[@id="content"]/form/div/div/input[2]'},
-  successRegistrationIdentify: { css: '#content > h1'},
-  successRegistrationText: "Your Account Has Been Created!",
-
-  verifyRegistrationAccountText() {
-    I.see(this.registerHeaderText);
-  },
-
+  registrationStatusLocator: { xpath: '//*[@id="content"]/h1' },
+  expectedRegistrationText: 'Your Account Has Been Created!',
+  
   fillRegisxtrationDetails(user) {
     I.fillField(this.firstNameField, user.firstName);
     I.fillField(this.lastNameField, user.lastName);
@@ -26,6 +22,6 @@ module.exports = {
     I.fillField(this.passwordConfirmField, user.password);
     I.checkOption(this.agreeCheckbox);
     I.click(this.registerButton);
-    I.see(this.successRegistrationText, this.successRegistrationIdentify);
+    I.see(this.expectedRegistrationText, this.registrationStatusLocator);
   }
 }
