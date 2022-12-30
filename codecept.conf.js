@@ -20,13 +20,17 @@ exports.config = {
       browser: 'chromium',
       waitForNavigation: 'networkidle',
       waitForTimeout: 5000,
-      windowSize: '1900x800',
-    }
+    },
+    "ChaiWrapper": {
+      "require": "codeceptjs-chai"
+    },
   },
   include: {
     "I": "./steps_file.js",
     "homePage": "./pages/home.js",
-    "registerPage": "./pages/register.js"
+    "registerPage": "./pages/register.js",
+    "productPage": "./pages/product.js",
+    "shoppingPage": "./pages/shopping.js"
   },
   name: 'js_stream3'
 }
